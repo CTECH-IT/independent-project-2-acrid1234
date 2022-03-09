@@ -1,1 +1,99 @@
 /* Put your CSS here */
+html, body {
+    height: 100%;
+}
+
+body {
+    background: rgb(130,194,215);
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+a[href="#"] {
+    text-decoration: none;
+}
+
+img {
+    width: 500px;
+    height: 300px;
+}
+
+span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 500 px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5;
+    padding: 0.4em 1em;
+}
+
+thumbnail-title {
+    background: rgb(96,125,139);
+    color: rgb(202,238,255);
+    display:block;
+    font-size: 18px;
+    margin: 0;
+    padding: 0.4em 1em;
+}
+
+.main-header {
+    flex: 0 1 auto;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail-image {
+    display: block;
+    width: 100%;
+}
+
+.thumbnail-item {
+    border: 2 px solid rgb(0,0,0);
+    border: 2 px solid rgb(0,0,0);
+    display: inline-block;
+
+    transition: transform 150 ms ease-in-out;
+}
+
+.thumbnail-item:hover {
+    transform: scale(1.1);
+}
+
+.thumbnail-item + .thumbnail-item {
+    margin-top: 10px;
+}
+
+.thumbnail-list {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-between;
+    list-style: none;
+    order: 2;
+}
+
+.hidden-detail .detail-image-container {
+    display: none;
+}
+
+@media all and (min-width: 600px) {
+    .main-content {
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .thumbnail-list {
+        flex-direction: column;
+        margin-left: 20px;
+        order: 0;
+        padding: 0 35px;
+    }
+}
+
+
+
