@@ -7,11 +7,18 @@ body {
     background: rgb(130,194,215);
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+
 }
+
 
 a[href="#"] {
     text-decoration: none;
+}
+
+#page-title {
+    font-size: 50px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
 }
 
 img {
@@ -21,22 +28,28 @@ img {
 
 span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 500 px;
+    font-size: 30px;
     font-weight: bold;
-    text-align: center;
     text-transform: uppercase;
     margin: 5;
     padding: 0.4em 1em;
 }
 
+p {
+    font-family: "Georgia", serif;
+    font-size: 15px;
+}   
+
 thumbnail-title {
     background: rgb(96,125,139);
     color: rgb(202,238,255);
     display:block;
-    font-size: 18px;
+    font-size: 5px;
     margin: 0;
     padding: 0.4em 1em;
 }
+
+ 
 
 .main-header {
     flex: 0 1 auto;
@@ -54,11 +67,9 @@ thumbnail-title {
 }
 
 .thumbnail-item {
-    border: 2 px solid rgb(0,0,0);
-    border: 2 px solid rgb(0,0,0);
     display: inline-block;
 
-    transition: transform 150 ms ease-in-out;
+    transition: transform 150ms ease-in-out;
 }
 
 .thumbnail-item:hover {
@@ -92,6 +103,7 @@ thumbnail-title {
         margin-left: 20px;
         order: 0;
         padding: 0 35px;
+        text-align: center;
     }
 }
 
