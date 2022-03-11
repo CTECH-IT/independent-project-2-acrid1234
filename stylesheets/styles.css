@@ -40,6 +40,11 @@ p {
     font-size: 15px;
 }   
 
+.more-info {
+    font-family: "Georgia", serif;
+    font-size: 15px;
+}
+
 thumbnail-title {
     background: rgb(96,125,139);
     color: rgb(202,238,255);

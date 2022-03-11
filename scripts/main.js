@@ -7,6 +7,32 @@ const THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
 const HIDDEN_DETAIL_CLASS = 'hidden-detail';
 const TINY_EFFECT_CLASS = 'is-tiny';
 
+function toggleText1() {
+    var text = document.querySelector("#more-info1");
+    if (text.style.display === "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  }
+
+  function toggleText2() {
+    var text = document.querySelector("#more-info2");
+    if (text.style.display === "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  }
+
+  function toggleText3() {
+    var text = document.querySelector("#more-info3");
+    if (text.style.display === "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  }
 
 function setDetails(imageUrl, titleText, moreInfo) {
     'use strict';
@@ -46,6 +72,7 @@ function addThumbClickHandler(thumb) {
         event.preventDefault(); //stop browser from following link
         setDetailsFromThumb(thumb);
         showDetails(); //show the big detail
+        showInfo(); //show info
     });
 }
 
@@ -71,6 +98,16 @@ function showDetails() {
     }, 50);
 }
 
+function showInfo() {
+    'use strict';
+    let frame = document.querySelector(DETAIL_INFO_SELECTOR);
+    document.body.classList.remove(HIDDEN_DETAIL_CLASS);
+    frame.classList.add(TINY_EFFECT_CLASS);
+    setTimeout(function () {
+        frame.classList.remove(TINY_EFFECT_CLASS);
+    }, 50);
+}
+
 function addKeyPressHandler() {
     'use strict';
     document.body.addEventListener('keyup', function(event) {
@@ -81,6 +118,7 @@ function addKeyPressHandler() {
     }
 });
 }
+
 
 function initializeEvents() {
     'use strict';
